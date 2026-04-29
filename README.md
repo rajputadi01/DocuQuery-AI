@@ -59,25 +59,25 @@
 * Node.js 18+
 * Google Gemini API Key
 
-### 1. Backend Setup
+## 1. Backend Setup
 
-# Navigate to the backend directory
+### Navigate to the backend directory
 cd docuquery-api
 
-# Set your API key as an environment variable
+### Set your API key as an environment variable
 export GEMINI_API_KEY="your_api_key_here"
 
-# Run the Spring Boot application
+### Run the Spring Boot application
 mvn spring-boot:run
 
 The backend will start on http://localhost:8080
 
-2. Frontend Setup
+## 2. Frontend Setup
 
-# Navigate to the frontend directory
+### Navigate to the frontend directory
 cd docuquery-ui
 
-# Install dependencies
+### Install dependencies
 npm install
 
 # Start the Vite development server

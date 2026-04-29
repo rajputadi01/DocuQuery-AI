@@ -1,0 +1,5 @@
+# Ignore build and dependency folders
+docuquery-api/target/
+docuquery-ui/node_modules/
+docuquery-ui/dist/
+.DS_Store

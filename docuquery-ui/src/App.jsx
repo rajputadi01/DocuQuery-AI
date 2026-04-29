@@ -91,7 +91,7 @@ function App() {
     formData.append('file', file);
 
     try {
-      const response = await axios.post('https://docuquery-api-idh9.onrender.com/api/documents/upload', formData);
+      const response = await axios.post('http://localhost:8080/api/documents/upload', formData);
       const newDocId = response.data.documentId;
       
       const now = new Date();
@@ -121,7 +121,7 @@ function App() {
     if (!window.confirm("Are you sure you want to delete this document from the AI memory?")) return;
     
     try {
-      await axios.delete(`https://docuquery-api-idh9.onrender.com/api/documents/${idToDelete}`);
+      await axios.delete(`http://localhost:8080/api/documents/${idToDelete}`);
       setDocuments(documents.filter(doc => doc.id !== idToDelete));
       
       const newSummaries = {...summaries}; delete newSummaries[idToDelete]; setSummaries(newSummaries);
@@ -139,7 +139,7 @@ function App() {
     if (!activeDocumentId) return;
     setLoading(true);
     try {
-      const response = await axios.get(`https://docuquery-api-idh9.onrender.com/api/documents/${activeDocumentId}/summary`);
+      const response = await axios.get(`http://localhost:8080/api/documents/${activeDocumentId}/summary`);
       setSummaries(prev => ({...prev, [activeDocumentId]: response.data}));
     } catch (error) {
       alert("Failed to get summary: " + (error.response?.data?.message || error.message));
@@ -164,7 +164,7 @@ function App() {
 
     setLoading(true);
     try {
-      const response = await fetch(`https://docuquery-api-idh9.onrender.com/api/documents/${activeDocumentId}/query`, {
+      const response = await fetch(`http://localhost:8080/api/documents/${activeDocumentId}/query`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ question: userQ })
@@ -242,7 +242,7 @@ function App() {
     if (!window.confirm("Are you sure you want to clear the conversation history for this document?")) return;
 
     try {
-      await axios.delete(`https://docuquery-api-idh9.onrender.com/api/documents/${activeDocumentId}/chat/reset`);
+      await axios.delete(`http://localhost:8080/api/documents/${activeDocumentId}/chat/reset`);
       setChatHistories(prev => ({ ...prev, [activeDocumentId]: [] }));
     } catch (error) {
       alert("Failed to reset chat: " + (error.response?.data?.message || error.message));

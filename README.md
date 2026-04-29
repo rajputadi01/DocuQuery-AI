@@ -136,7 +136,7 @@ docuquery/
 
 ---
 
-## Interview / Design Notes
+## Design Notes
 
 **On the vector store:** `InMemoryEmbeddingStore` was a deliberate choice for the free-tier deployment. Because all service code is written against the `EmbeddingStore<TextSegment>` interface, swapping to `pgvector` or Pinecone in production requires changing exactly one Spring `@Bean` definition.
 

@@ -5,6 +5,7 @@
 **DocuQuery AI** is a full-stack, stateful Retrieval-Augmented Generation (RAG) platform designed for high-performance document intelligence. It transforms unstructured PDFs into structured, auditable, and actionable insights using a modern AI-native stack.
 
 🔗 **Live Demo:** https://documentquery.vercel.app/
+
 ⚙️ **API Health Status:** https://docuquery-api-idh9.onrender.com/api/health
 
 ---

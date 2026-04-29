@@ -4,6 +4,9 @@
 
 **Live Demo →** [documentquery.vercel.app](https://documentquery.vercel.app/) &nbsp;|&nbsp; **API Status →** [/api/health](https://docuquery-api-idh9.onrender.com/api/health)
 
+
+![Architecture Diagram](./architecture/diagram.png)
+
 ---
 
 ## What is DocuQuery AI?

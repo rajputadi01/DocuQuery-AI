@@ -30,7 +30,7 @@ DocuQuery AI is a full-stack Retrieval-Augmented Generation (RAG) platform that 
 ## Architecture Overview
 
 ```
-┌─────────────────────┐     REST / SSE      ┌──────────────────────┐     LangChain4j      ┌─────────────────────┐
+┌─────────────────────┐     REST / SSE      ┌──────────────────────┐     LangChain4j     ┌─────────────────────┐
 │    Client Tier      │ ──────────────────► │  Application Layer   │ ──────────────────► │   AI & Data Layer   │
 │                     │                     │                      │                     │                     │
 │  React + Vite       │ ◄── SSE Token Stream│  Spring Boot 3       │ ◄── Answer Stream   │  LangChain4j 0.36   │
